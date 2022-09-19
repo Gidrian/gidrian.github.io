@@ -2,15 +2,15 @@
 	//include '../defines.php';
 
 	// VERIFICATION STEPS
-	file_put_contents( 'verify.log', print_r( $_GET, true ), FILE_APPEND );
-	echo $_GET['hub_challenge'];
-	die();
+	//file_put_contents( 'verify.log', print_r( $_GET, true ), FILE_APPEND );
+	//echo $_GET['hub_challenge'];
+	//die();
 
 	// TESTING OF THE WEBHOOKS
-	// $json = file_get_contents( 'php://input' );
-	// $data = json_decode( $json );
-	// file_put_contents( 'data.log', print_r( $data, true ), FILE_APPEND );
-	// //die();
+	$json = file_get_contents( 'php://input' );
+	$data = json_decode( $json );
+	file_put_contents( 'data.log', print_r( $data, true ), FILE_APPEND );
+	die();
 
 	// $commentId = '17893015459452492';
 	// $mediaId = '17908649842399636';
