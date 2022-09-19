@@ -2,9 +2,9 @@
 	//include '../defines.php';
 
 	// VERIFICATION STEPS
-	//file_put_contents( 'verify.log', print_r( $_GET, true ), FILE_APPEND );
-	//echo $_GET['hub_challenge'];
-	//die();
+	file_put_contents( 'verify.log', print_r( $_GET, true ), FILE_APPEND );
+	echo $_GET['hub_challenge'];
+	die();
 
 	// TESTING OF THE WEBHOOKS
 	// $json = file_get_contents( 'php://input' );
@@ -31,7 +31,7 @@
 	// echo '<pre>';
 	// print_r($responseInfo);
 
-	function makeApiCall( $params ) {
+	/*function makeApiCall( $params ) {
 		$ch = curl_init();
 
 		curl_setopt( $ch, CURLOPT_POSTFIELDS, http_build_query( $params['url_params'] ) );
@@ -51,7 +51,7 @@
 		$responseArray = json_decode( $response, true );
 
 		return $responseArray;
-	}
+	}*/
 ?>
 <html>
 	<head>
