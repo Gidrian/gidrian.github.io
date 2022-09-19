@@ -2,9 +2,9 @@
 	//include '../defines.php';
 
 	// VERIFICATION STEPS
-	//file_put_contents( 'verify.log', print_r( $_GET, true ), FILE_APPEND );
-	//echo $_GET['hub_challenge'];
-	//die();
+	file_put_contents( 'verify.log', print_r( $_GET, true ), FILE_APPEND );
+	echo $_GET['hub_challenge'];
+	die();
 
 	// TESTING OF THE WEBHOOKS
 	$json = file_get_contents( 'php://input' );
